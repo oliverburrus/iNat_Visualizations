@@ -1,4 +1,5 @@
 #Go to https://www.inaturalist.org/observations/export to get your data.
+#Highest Rank MUST be set to Species!
 #The file MUST have the following columns:
 #Taxon Species Name
 #Common Name
