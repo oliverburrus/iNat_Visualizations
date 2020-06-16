@@ -16,6 +16,8 @@ Note: if you are experiencing any issues or if this seems too complicated and ti
 
 After you suscessfully complete the download, you will see a window for writing the script in the top left, type and execute (ctrl+enter) the following commands:
 
+*library(devtools)*
+
 *install.packages("reactable")*
 
 *install_github("hrbrmstr/streamgraph", type = "binary")*
