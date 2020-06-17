@@ -24,3 +24,11 @@ After you suscessfully complete the download, you will see a window for writing 
 
 Next, click the green plus (with a document in the backgrond) button right under file in the top left corner. 
 Now select, *"R Script"*, it sould now bring up a new script. You are now ready to copy and paste any of the code in this repository.
+
+------------
+
+**FUTURE GOALS**
+
+1 - Use API to create easy access to data
+2 - Target lists based on location
+3 - And many many more cool graphs for your data!
