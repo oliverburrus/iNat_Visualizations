@@ -30,5 +30,9 @@ Now select, *"R Script"*, it sould now bring up a new script. You are now ready 
 **FUTURE GOALS**
 
 1 - Use API to create easy access to data
+
 2 - Target lists based on location
-3 - And many many more cool graphs for your data!
+
+3 - Make a Shiny App dashboard to streamline the process and make it so anyone can use these features, not just those who know how to code.
+
+4 - And many many more cool graphs for your data!
