@@ -21,11 +21,7 @@ while(x < (parsed$total_results/500)+1){
     data <- list.stack(modJSON)
   }
   if(x > 1){
-    resp1 <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?user_id=", user, "&page=", as.character(x+1), "&hrank=species", sep = ""))
-    parsed1 <- content(resp, as = "parsed")
-    modJSON1 <- parsed$results
-    modJSON1 <- list.select(modJSON1, taxon$name, count, taxon$observations_count)
-    dataz <- list.stack(modJSON1)
+    dataz <- list.stack(modJSON)
     data <- rbind(data, dataz)
   }
   x <- x+1
