@@ -3,6 +3,7 @@ user <- "your_username"
 
 #Load required packages
 library(httr)
+library(rlist)
 library(reactable)
 library(dplyr)
 
@@ -15,8 +16,8 @@ parsed <- content(resp, as = "parsed")
 while(x < (parsed$total_results/500)+1){
   resp <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?user_id=", user, "&page=", as.character(x), "&hrank=species", sep = ""))
   parsed <- content(resp, as = "parsed")
-  modJSON <- parsed$results
-  modJSON <- list.select(modJSON, taxon$name, count, taxon$observations_count)
+  modJSON <- parsed$results %>%
+    list.select(taxon$name, count, taxon$observations_count)
   if(x == 1){
     data <- list.stack(modJSON)
   }
@@ -37,5 +38,5 @@ data <- data.frame(data$V1, data$count, data$V2)
 names(data) <- c("Species", "Your Obs", "Total Obs")
 
 #Build the table
-a <- reactable(data, striped = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(10, 50, 100, 1000, 10000), filterable = TRUE)
+a <- reactable(data, striped = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(5, 10, 20, 100), filterable = TRUE)
 a
