@@ -28,8 +28,7 @@ while(x < (parsed$total_results/500)+1){
   x <- x+1
 }
 
-#Add a logical column to define if you have the ONLY 
-#iNat ob(s) of a certain species.
+#Add a logical column to define if you have the ONLY iNat ob(s) of a certain species.
 data$logic <- data$V2 == data$count
 
 #Filter the data based on the Logical column
