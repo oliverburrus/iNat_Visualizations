@@ -15,8 +15,8 @@ data <- read.csv(choose.files(), na.strings = c("", "NA"))
 
 #Filter the data
 data$logic <- is.na(data$iconic_taxon_name)
-data <- filter(data, logic == FALSE)
-data <- separate(data, observed_on, into = c("Year", "Month", "Day"), sep = "-")
+data <- filter(data, logic == FALSE) %>%
+  separate(observed_on, into = c("Year", "Month", "Day"), sep = "-")
 df <- as.data.frame(table(data$Month, data$iconic_taxon_name))
 names(df) <- c("Month", "Iconic Taxon", "Obs")
 
@@ -26,8 +26,8 @@ p <- ggplot(data = df,
   geom_bar(position="stack", stat="identity")+
   scale_colour_gradientn(colours=rainbow(10))+
   scale_fill_hue(l=50)
-p <- ggplotly(p, tooltip = c("Iconic Taxon", "Obs"))  %>% 
+p %>%
+  ggplotly(tooltip = c("Iconic Taxon", "Obs")) %>% 
   config(displayModeBar = FALSE) %>% 
   layout(xaxis = list(fixedrange = TRUE)) %>% 
   layout(yaxis = list(fixedrange = TRUE))
-p
