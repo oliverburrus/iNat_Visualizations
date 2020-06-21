@@ -1,3 +1,15 @@
+#Go to https://www.inaturalist.org/observations/export to get your data.
+#Highest Rank should be set to Species but not necessary.
+#The file MUST have the following columns:
+#taxon_kingdom_name
+#taxon_phylum_name
+#taxon_class_name
+#taxon_order_name
+#taxon_family_name
+#taxon_genus_name
+#taxon_species_name
+
+
 #Load required packages
 library(tidyr)
 library(plyr)
