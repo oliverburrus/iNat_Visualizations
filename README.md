@@ -27,6 +27,10 @@ Now select, *"R Script"*, it sould now bring up a new script. You are now ready 
 
 ------------
 
+**EXAMPLES ON RPUBS**
+
+Treemap - https://rpubs.com/whimbrelbirder/treemap
+
 **FUTURE GOALS**
 
 1 - Use API to create easy access to data
