@@ -1,3 +1,5 @@
+#This code allows you to find out with species you have observed on iNat that no one else has.
+
 #Replace the following text with your iNat username
 user <- "your_username"
 
