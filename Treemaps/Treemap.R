@@ -1,3 +1,5 @@
+#This code allows you to visualize your observations in an interactive treemap.
+
 #Go to https://www.inaturalist.org/observations/export to get your data.
 #Highest Rank should be set to Species but not necessary.
 #The file MUST have the following columns:
