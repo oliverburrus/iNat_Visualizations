@@ -1,3 +1,5 @@
+#This code allows you to visualize how many observations you have put in iNat for every month.
+
 #Go to https://www.inaturalist.org/observations/export to get your data.
 #Highest Rank MUST be set to Species!
 #The file MUST have the following columns:
