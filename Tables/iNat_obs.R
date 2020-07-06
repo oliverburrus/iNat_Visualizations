@@ -15,7 +15,7 @@ resp <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?us
 parsed <- content(resp, as = "parsed")
 
 #Retreving data from the API
-while(x < (parsed$total_results/500)+1){
+while(x <= (parsed$total_results/500)){
   resp <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?user_id=", user, "&page=", as.character(x), "&hrank=species", sep = ""))
   parsed <- content(resp, as = "parsed")
   modJSON <- parsed$results %>%
