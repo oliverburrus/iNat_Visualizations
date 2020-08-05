@@ -56,3 +56,4 @@ ggplot(data = eBird,
   scale_x_continuous(breaks = seq(min(eBird$Year), max(eBird$Year), 1), minor_breaks = 0)+
   ylim(0, max(eBird$Freq)+(max(eBird$Freq)/10))
 
+#Part of the text in the comments was copied from the rebird documentation
