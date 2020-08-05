@@ -16,23 +16,22 @@ years_back <- 10
 
 #Retreve the data with rebird
 x <- as.numeric(format(Sys.Date(), "%Y")) - years_back
-while(x < as.numeric(format(Sys.Date(), "%Y"))){
-  if(x == as.numeric(format(Sys.Date(), "%Y")) - years_back){
-    eBird <- ebirdfreq(Loc_Type, Loc_ID, startyear = x, endyear = x) %>%
+for(i in x:as.numeric(format(Sys.Date(), "%Y"))){
+  if(i == as.numeric(format(Sys.Date(), "%Y")) - years_back){
+    eBird <- ebirdfreq(Loc_Type, Loc_ID, startyear = i, endyear = i) %>%
       dplyr::filter(comName == Species)
     eBird <- data.frame(sum(eBird$frequency), sum(eBird$sampleSize))
     names(eBird) <- c("Freq", "Sample")
   } else{
-    eBirdz <- ebirdfreq(Loc_Type, Loc_ID, startyear = x, endyear = x) %>%
+    eBirdz <- ebirdfreq(Loc_Type, Loc_ID, startyear = i, endyear = i) %>%
       dplyr::filter(comName == Species)
     eBirdz <- data.frame(sum(eBirdz$frequency), sum(eBirdz$sampleSize))
     names(eBirdz) <- c("Freq", "Sample")
     eBird <- rbind(eBird, eBirdz)
   }
-  x <- x+1
 }
 #Add columns
-eBird$Year <- seq(as.numeric(format(Sys.Date(), "%Y")) - (years_back-1), as.numeric(format(Sys.Date(), "%Y")))
+eBird$Year <- seq(as.numeric(format(Sys.Date(), "%Y")) - (years_back), as.numeric(format(Sys.Date(), "%Y")))
 eBird$Average <- mean(eBird$Freq)
 eBird$GrThAvg <- eBird$Freq > eBird$Average
 
