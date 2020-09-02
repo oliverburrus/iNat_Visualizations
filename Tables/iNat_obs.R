@@ -10,7 +10,6 @@ library(reactable)
 library(dplyr)
 
 #API set-up
-x <- 1
 resp <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?user_id=", user, "&page=", as.character(x), "&hrank=species", sep = ""))
 parsed <- content(resp, as = "parsed")
 
