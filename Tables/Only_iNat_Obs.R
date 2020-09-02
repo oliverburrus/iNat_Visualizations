@@ -10,16 +10,15 @@ library(reactable)
 library(dplyr)
 
 #API set-up
-x <- 1
 resp <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?user_id=", user, "&page=", as.character(x), "&hrank=species", sep = ""))
 parsed <- content(resp, as = "parsed")
 
 #Retreving data from the API
-while(x < (parsed$total_results/500)+1){
+for(x in 1:(parsed$total_results/500)+1){
   resp <- GET(paste("https://api.inaturalist.org/v1/observations/species_counts?user_id=", user, "&page=", as.character(x), "&hrank=species", sep = ""))
   parsed <- content(resp, as = "parsed")
-  modJSON <- parsed$results %>%
-    list.select(taxon$name, count, taxon$observations_count)
+  modJSON <- parsed$results
+  modJSON <- list.select(modJSON, taxon$name, count, taxon$observations_count)
   if(x == 1){
     data <- list.stack(modJSON)
   }
@@ -27,7 +26,6 @@ while(x < (parsed$total_results/500)+1){
     dataz <- list.stack(modJSON)
     data <- rbind(data, dataz)
   }
-  x <- x+1
 }
 
 #Add a logical column to define if you have the ONLY iNat ob(s) of a certain species.
