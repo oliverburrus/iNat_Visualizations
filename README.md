@@ -39,4 +39,6 @@ Treemap - https://rpubs.com/whimbrelbirder/treemap
 
 3 - Make a Shiny App dashboard to streamline the process and make it so anyone can use these features, not just those who know how to code.
 
-4 - And many many more cool graphs for your data!
+4 - Merge to iNat API v2
+
+5 - And many many more cool graphs for your data!
