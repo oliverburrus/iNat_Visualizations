@@ -1,8 +1,8 @@
 #This code allows you to view the iNat leaderboard.
 
 #Replace the following text with the desired taxon id and place id.
-Taxon_id <- 26718
-Place_id <- 35
+Taxon_id <- #The desired taxon ID (NOT the name)
+Place_id <- #The desired place ID (NOT the name)
 
 #Load required packages
 library(httr)
