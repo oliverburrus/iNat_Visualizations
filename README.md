@@ -27,9 +27,10 @@ Now select, *"R Script"*, it sould now bring up a new script. You are now ready 
 
 ------------
 
-**EXAMPLES ON RPUBS**
+**EXAMPLES**
 
 Treemap - https://rpubs.com/whimbrelbirder/treemap
+Choropleth Map - https://forum.inaturalist.org/t/some-choropleth-maps-using-inat-data/21776/2
 
 **FUTURE GOALS**
 
