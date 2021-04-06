@@ -1,4 +1,4 @@
-# iNat_lists
+# iNaturalist Visualizations
 
 **FOR BEGINNING CODERS:**
 
@@ -33,7 +33,7 @@ Treemap - https://rpubs.com/whimbrelbirder/treemap
 
 **FUTURE GOALS**
 
-1 - Use API to create easy access to data
+<strike>1 - Use API to create easy access to data</strike>
 
 2 - Target lists based on location
 
