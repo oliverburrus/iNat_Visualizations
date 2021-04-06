@@ -1,4 +1,4 @@
-Taxon_ID <- 3
+Taxon_ID <- #Enter your target taxon_id here, NOT the taxon_name (eg. if you are trying to make a choropleth map for birds, enter 3, NOT "Birds", you can find the taxon ID by going to Explore on iNaturalist.org)
 
 # After running the code below, lets create the choropleth map using datawrapper.de
 # 1 - locate the csv file (eg. Choropleth_Taxon_3.csv) in your current working directory, open in a spredsheet editor, and copy the "count" column.
